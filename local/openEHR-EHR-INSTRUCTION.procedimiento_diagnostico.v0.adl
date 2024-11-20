@@ -1,0 +1,72 @@
+archetype (adl_version=1.4; uid=8ab08899-57ee-4483-b358-6e0ec6f7e407)
+	openEHR-EHR-INSTRUCTION.procedimiento_diagnostico.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6a8cdb26ca723b318c7f9264218f1c73">
+		["build_uid"] = <"dc832b54-899b-3d9a-9cbb-88fda062d6b4">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- Procedimiento Diagnostico
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] matches {    -- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {    -- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] occurrences matches {0..1} matches {    -- Comentarios
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+				action_archetype_id matches {/openEHR-EHR-ACTION\.procedimiento_diagnostico\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Procedimiento Diagnostico">
+					description = <"Procedimiento Diagnostico">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Comentarios">
+					description = <"">
+				>
+			>
+		>
+	>
