@@ -1,0 +1,105 @@
+archetype (adl_version=1.4; uid=cf6f8235-d36f-4459-ab9c-0738218a576a)
+	openEHR-EHR-EVALUATION.actividad_psicomotora.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4c15b91aa32387443af41aa9d72d2b67">
+		["build_uid"] = <"1fe28d58-c29c-3e3d-a811-3f53486b2bc4">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Actividad Psicomotora
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Estado Emocional
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003,    -- Tranquilo
+									at0004,    -- Irritable
+									at0005]    -- Ansioso
+								}
+							}
+						}
+					}
+					ELEMENT[at0006] matches {    -- Expresion Corporal
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007,    -- Tiene una expresión y movimiento corporal norma
+									at0008]    -- Muestra un estado afectivo plano y deprimido
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Actividad Psicomotora">
+					description = <"Actividad Psicomotora">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Estado Emocional">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tranquilo">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Irritable">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Ansioso">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Expresion Corporal">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Tiene una expresión y movimiento corporal norma">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Muestra un estado afectivo plano y deprimido">
+					description = <"">
+				>
+			>
+		>
+	>
