@@ -1,0 +1,70 @@
+archetype (adl_version=1.4; uid=4aea957e-b1d2-4454-9bb0-46f72af94626)
+	openEHR-EHR-SECTION.triage.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"379569bd96421151ced4cf309efd5ab0">
+		["build_uid"] = <"b5642605-4575-3093-abee-152ee096b98d">
+	>
+
+definition
+	SECTION[at0000] matches {    -- Triage
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0002] matches {    -- Signos Vitales
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.signos_vitales\.v0/}
+			}
+			allow_archetype OBSERVATION[at0003] matches {    -- Flujo Espiratorio Maximo
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.flujoespiratoriomaximo\.v0/}
+			}
+			allow_archetype SECTION[at0004] matches {    -- Evaluacion De Gravedad
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.evaluacion_gravedad\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Triage">
+					description = <"Triage">
+				>
+				["at0002"] = <
+					text = <"Signos Vitales">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Flujo Espiratorio Maximo">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Evaluacion De Gravedad">
+					description = <"">
+				>
+			>
+		>
+	>
