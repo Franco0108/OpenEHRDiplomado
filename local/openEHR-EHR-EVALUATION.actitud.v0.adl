@@ -1,0 +1,72 @@
+archetype (adl_version=1.4; uid=fec9ae27-5175-4d5e-b93a-8c6459ef9401)
+	openEHR-EHR-EVALUATION.actitud.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e455a044bf5736b04d764d20ec87ebc8">
+		["build_uid"] = <"a12dc163-5a97-3d04-b15b-1f8a9c154e6d">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Actitud
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Amigable
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0003] matches {    -- Cooperativo
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Actitud">
+					description = <"Actitud">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Amigable">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Cooperativo">
+					description = <"">
+				>
+			>
+		>
+	>
