@@ -1,0 +1,135 @@
+archetype (adl_version=1.4; uid=39c0fced-b8f6-4a90-b19f-befe8fbdfb7a)
+	openEHR-EHR-EVALUATION.aparencia.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0d55eb18b59e5894cacb46046b6d4b95">
+		["build_uid"] = <"18c68466-7b75-37af-abe0-85411eff1fc0">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Aparencia
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Edad
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] matches {    -- Vestimenta
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] matches {    -- Nivel General de Bienestar
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] matches {    -- Sexo
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] matches {    -- Arreglo Personal
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] matches {    -- Estatura
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] matches {    -- Peso
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] matches {    -- Postura
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0010] matches {    -- Contacto Visual
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Aparencia">
+					description = <"Aparencia">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Edad">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Vestimenta">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Nivel General de Bienestar">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Sexo">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Arreglo Personal">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Estatura">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Peso">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Postura">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Contacto Visual">
+					description = <"">
+				>
+			>
+		>
+	>
