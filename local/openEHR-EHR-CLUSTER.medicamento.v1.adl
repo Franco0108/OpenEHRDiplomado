@@ -1,0 +1,131 @@
+archetype (adl_version=1.4; uid=11444e8e-278a-475d-80ab-7088a39d0652)
+	openEHR-EHR-CLUSTER.medicamento.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-08">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"98f9d331f0c8e44189968c25be8ceec8">
+		["build_uid"] = <"763f52eb-cea5-319e-aa13-8ab644df4b64">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Medicamento
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0005] matches {*}    -- NombreFarmaco
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Concentración
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::119]>
+						list = <
+							["1"] = <
+								units = <"g/L">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- TipodeVenta
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- Venta Libre
+							at0008,    -- Receta En Blanco
+							at0009,    -- Receta Retenida
+							at0010]    -- Receta Cheque
+						}
+					}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- FormaFarmaceutica
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[ac0002]
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"Snomed", ...>
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Medicamento">
+					description = <"Medicamento">
+				>
+				["at0004"] = <
+					text = <"Concentración">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"NombreFarmaco">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"TipodeVenta">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Venta Libre">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Receta En Blanco">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Receta Retenida">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Receta Cheque">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"FormaFarmaceutica">
+					description = <"">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["es-cl"] = <
+			items = <
+				["ac0002"] = <
+					text = <"concept is-a 421967003">
+					description = <"Forma Farmaceutica">
+				>
+			>
+		>
+	>
+	constraint_binding = <
+		["Snomed"] = <
+			items = <
+				["ac0002"] = <http://snomed.sct>
+			>
+		>
+	>
