@@ -1,0 +1,145 @@
+archetype (adl_version=1.4; uid=2a4aaec4-6f1b-4be3-9151-77029b2c3dd0)
+	openEHR-EHR-INSTRUCTION.tratamiento_farmacologico.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"5a300fb94bd4b8741d7d43be907e5621">
+		["build_uid"] = <"e5ac375e-8e73-3c27-b89f-8219695f4b08">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- Tratamiento Farmacologico
+		activities cardinality matches {1..*; unordered} matches {
+			ACTIVITY[at0006] occurrences matches {0..1} matches {    -- ACTIVITY
+				description matches {
+					ITEM_TREE[at0005] matches {    -- Item tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Dosis
+								value matches {
+									C_DV_QUANTITY <
+										
+										list = <
+											["1"] = <
+												units = <"mg">
+											>
+											["2"] = <
+												units = <"g">
+											>
+											["3"] = <
+												units = <"mL">
+											>
+											["4"] = <
+												units = <"cm3">
+												precision = <|1|>
+											>
+										>
+									>
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Ruta
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[ac0000]
+										}
+									}
+								}
+							}
+							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Frecuencia
+								value matches {
+									C_DV_QUANTITY <
+										property = <[openehr::128]>
+										list = <
+											["1"] = <
+												units = <"d">
+											>
+											["2"] = <
+												units = <"h">
+											>
+											["3"] = <
+												units = <"wk">
+											>
+											["4"] = <
+												units = <"min">
+											>
+										>
+									>
+								}
+							}
+						}
+					}
+				}
+				action_archetype_id matches {/openEHR-EHR-ACTION\.tratamientofarmacologico\.v0/}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"Snomed", ...>
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tratamiento Farmacologico">
+					description = <"Tratamiento Farmacologico">
+				>
+				["at0005"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"ACTIVITY">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Dosis">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Ruta">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Frecuencia">
+					description = <"">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["es-cl"] = <
+			items = <
+				["ac0000"] = <
+					text = <"concept is-a 284009009">
+					description = <"rutas">
+				>
+			>
+		>
+	>
+	constraint_binding = <
+		["Snomed"] = <
+			items = <
+				["ac0000"] = <http://snomed.info/sct/449081005/version/20230430>
+			>
+		>
+	>
