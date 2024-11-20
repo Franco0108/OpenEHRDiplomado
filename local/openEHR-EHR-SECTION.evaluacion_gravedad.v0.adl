@@ -1,0 +1,104 @@
+archetype (adl_version=1.4; uid=b3e19341-4455-4659-9b34-b8cc98741ea2)
+	openEHR-EHR-SECTION.evaluacion_gravedad.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a711c22c92a7b5bc7195ac965abf9c4b">
+		["build_uid"] = <"db769148-4c01-3dc9-b32d-cdec99354023">
+	>
+
+definition
+	SECTION[at0000] matches {    -- Evaluacion Gravedad
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0005] matches {    -- Trabajo Respiratorio
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.trabajorespiratorio\.v0/}
+			}
+			allow_archetype OBSERVATION[at0006] matches {    -- Uso Musculo Respiratorio
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.usomusculos\.v0/}
+			}
+			allow_archetype SECTION[at0007] matches {    -- Evaluacion Estado Mental
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.estado_mental\.v0/}
+			}
+			EVALUATION[at0009] occurrences matches {0..1} matches {    -- Evaluaciones de Gravedad Adicionales
+				data matches {
+					ITEM_TREE[at0008] matches {    -- Item tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0010] matches {    -- Capacidad de Hablar
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0011] matches {    -- Auscilacion
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluacion Gravedad">
+					description = <"Evaluacion Gravedad">
+				>
+				["at0005"] = <
+					text = <"Trabajo Respiratorio">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Uso Musculo Respiratorio">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Evaluacion Estado Mental">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"Evaluaciones de Gravedad Adicionales">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Capacidad de Hablar">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Auscilacion">
+					description = <"">
+				>
+			>
+		>
+	>
