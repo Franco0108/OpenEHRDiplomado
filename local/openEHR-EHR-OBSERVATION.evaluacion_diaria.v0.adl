@@ -1,0 +1,93 @@
+archetype (adl_version=1.4; uid=e01f98ad-d66d-4ce4-bccb-183777971557)
+	openEHR-EHR-OBSERVATION.evaluacion_diaria.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0f6406e6225ea449c74842730953990e">
+		["build_uid"] = <"3d77dacb-b106-3d81-baca-27e0611f9866">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Evaluacion Diaria
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] matches {    -- Evaluacion
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0005] matches {    -- Fecha y hora del registro
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+						offset matches {
+							DV_DURATION matches {
+								value matches {P1D}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Evaluacion Diaria">
+					description = <"Evaluacion Diaria">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Evaluacion">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Fecha y hora del registro">
+					description = <"">
+				>
+			>
+		>
+	>
