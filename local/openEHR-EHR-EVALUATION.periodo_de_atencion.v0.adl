@@ -1,0 +1,99 @@
+archetype (adl_version=1.4; uid=500b687a-8020-4865-bf52-07727e84bfba)
+	openEHR-EHR-EVALUATION.periodo_de_atencion.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3469ccf9bdb4c364059f2e6d0aea8665">
+		["build_uid"] = <"393c93d1-8ff3-38db-ac1a-284eb197dcad">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Periodo de Atencion
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] matches {    -- Capacidad de Completar Pensamiento
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0004] matches {    -- Capacidad de Resolver Problemas
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0005] matches {    -- Capacidad de realizar operaciones matematicas secuenciales
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0006] matches {    -- Deletro de palabras
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0007] matches {    -- Repetir 7 numeros en orden ascendente y 5 en orden inverso
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Periodo de Atencion">
+					description = <"Periodo de Atencion">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Capacidad de Completar Pensamiento">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Capacidad de Resolver Problemas">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Capacidad de realizar operaciones matematicas secuenciales">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Deletro de palabras">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Repetir 7 numeros en orden ascendente y 5 en orden inverso">
+					description = <"">
+				>
+			>
+		>
+	>
