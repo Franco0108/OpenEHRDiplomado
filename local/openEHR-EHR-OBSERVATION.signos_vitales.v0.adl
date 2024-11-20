@@ -1,0 +1,181 @@
+archetype (adl_version=1.4; uid=7819ceb5-fce4-4b9b-9506-cb658759a7be)
+	openEHR-EHR-OBSERVATION.signos_vitales.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ba6f07f843cc0678a6ed6570959a28b8">
+		["build_uid"] = <"f94760ec-edee-34f9-8428-5ea37fe2c519">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Signos Vitales
+		protocol matches {
+			ITEM_TREE[at0007] matches {*}    -- Item tree
+		}
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] matches {    -- Temperatura
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::127]>
+												list = <
+													["1"] = <
+														units = <"Cel">
+														precision = <|1|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"°C">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0005] matches {    -- SpO2
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"%">
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0006] matches {    -- Frecuencia Cardiaca
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::382]>
+												list = <
+													["1"] = <
+														units = <"/min">
+														precision = <|0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0008] matches {    -- Presion Sistolica
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::125]>
+												list = <
+													["1"] = <
+														units = <"mm[Hg]">
+														precision = <|0|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"mmHg">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0009] matches {    -- Presion Diastolica
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::125]>
+												list = <
+													["1"] = <
+														units = <"mm[Hg]">
+														precision = <|0|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"mmHg">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0010] matches {    -- Registro
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Signos Vitales">
+					description = <"Signos Vitales">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Temperatura">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"SpO2">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Frecuencia Cardiaca">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Presion Sistolica">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Presion Diastolica">
+					description = <"">
+				>
+				["mm[Hg]"] = <
+					text = <"mm[Hg]">
+					description = <"millimeters of mercury">
+				>
+				["at0010"] = <
+					text = <"Registro">
+					description = <"">
+				>
+			>
+		>
+	>
