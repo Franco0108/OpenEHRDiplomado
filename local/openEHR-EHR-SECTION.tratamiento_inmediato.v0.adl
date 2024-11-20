@@ -1,0 +1,108 @@
+archetype (adl_version=1.4; uid=c407f886-246d-4c16-9311-7c983b2f16c4)
+	openEHR-EHR-SECTION.tratamiento_inmediato.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"06bdd6b63d8eeb7d67dd38b14d524724">
+		["build_uid"] = <"3db8eb59-a2d3-3e7c-a2cf-1215d89c5499">
+	>
+
+definition
+	SECTION[at0000] matches {    -- Tratamiento Inmediato
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype INSTRUCTION[at0001] occurrences matches {1..*} matches {    -- Tratamiento Farmacologico
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0002] occurrences matches {1..*} matches {    -- Pruebas Diagnosticas
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.procedimiento_diagnostico\.v0/}
+			}
+			OBSERVATION[at0004] occurrences matches {0..1} matches {    -- Reevaluacion
+				data matches {
+					HISTORY[at0003] matches {    -- History
+						events cardinality matches {1..*; unordered} matches {
+							INTERVAL_EVENT[at0005] occurrences matches {0..1} matches {    -- evento
+								data matches {
+									ITEM_TREE[at0006] matches {    -- Item tree
+										items cardinality matches {0..*; unordered} matches {
+											ELEMENT[at0007] occurrences matches {0..1} matches {    -- Reevaluacion
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+								}
+								width matches {
+									DV_DURATION matches {
+										value matches {PT30S}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tratamiento Inmediato">
+					description = <"Tratamiento Inmediato">
+				>
+				["at0001"] = <
+					text = <"Tratamiento Farmacologico">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Pruebas Diagnosticas">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Reevaluacion">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"evento">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"Reevaluacion">
+					description = <"">
+				>
+			>
+		>
+	>
