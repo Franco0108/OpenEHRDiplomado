@@ -1,0 +1,120 @@
+archetype (adl_version=1.4; uid=33570aad-ffbe-498e-9cf4-8c7ed88cdce3)
+	openEHR-EHR-CLUSTER.patient.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"583864a4a35cb47e5f67625b589c473f">
+		["build_uid"] = <"eed24fe3-e100-3c4c-b671-25551abb7b41">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Patient
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] matches {    -- Identificador
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Nombres
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Primer Apellido
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Segundo Apelliodo
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- SexoBiologico
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0008,    -- Masculino
+							at0009,    -- Femenino
+							at0010,    -- Intersexual
+							at0011,    -- Otro
+							at0012]    -- Ninguno
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient">
+					description = <"Patient">
+				>
+				["at0001"] = <
+					text = <"Identificador">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Nombres">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Primer Apellido">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Segundo Apelliodo">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"SexoBiologico">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Masculino">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Femenino">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Intersexual">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Otro">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Ninguno">
+					description = <"">
+				>
+			>
+		>
+	>
