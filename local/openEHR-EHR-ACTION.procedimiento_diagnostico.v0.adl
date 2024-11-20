@@ -1,0 +1,176 @@
+archetype (adl_version=1.4; uid=d992bd4e-0350-41a5-afc6-11355a5f32f2)
+	openEHR-EHR-ACTION.procedimiento_diagnostico.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"78bbaab7ec909c1f5819d0045b7aa912">
+		["build_uid"] = <"d18f6c62-0005-327f-8f39-0d7816690ba4">
+	>
+
+definition
+	ACTION[at0000] matches {    -- Procedimiento Diagnostico
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Procedimiento
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[ac0000]
+								}
+							}
+						}
+					}
+					ELEMENT[at0004] matches {    -- Fecha Agenda
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0005] matches {    -- Creado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0005]    -- Creado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0006] matches {    -- Agendado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0006]    -- Agendado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0007] matches {    -- Completado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0007]    -- Completado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0008] matches {    -- Cancelado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::528]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0008]    -- Cancelado
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"snomed", ...>
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Procedimiento Diagnostico">
+					description = <"Procedimiento Diagnostico">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Procedimiento">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Fecha Agenda">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Creado">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Agendado">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Completado">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Cancelado">
+					description = <"">
+				>
+			>
+		>
+	>
+	constraint_definitions = <
+		["es-cl"] = <
+			items = <
+				["ac0000"] = <
+					text = <"concept is-a 71388002 |procedimiento (procedimiento)|">
+					description = <"">
+				>
+			>
+		>
+	>
+	constraint_binding = <
+		["snomed"] = <
+			items = <
+				["ac0000"] = <http://snomed.info/sct>
+			>
+		>
+	>
