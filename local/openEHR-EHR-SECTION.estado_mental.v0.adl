@@ -1,0 +1,129 @@
+archetype (adl_version=1.4; uid=af63f7e8-e862-484d-87b9-7d599de7b16f)
+	openEHR-EHR-SECTION.estado_mental.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"abfe45b769268c11bbdc23c61c5afb66">
+		["build_uid"] = <"fa9b570d-4d83-3328-af1d-96fd095d34c3">
+	>
+
+definition
+	SECTION[at0000] matches {    -- Estado Mental
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype EVALUATION[at0014] matches {    -- Apariencia
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.aparencia\.v0/}
+			}
+			allow_archetype EVALUATION[at0013] matches {    -- Actitud
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.actitud\.v0/}
+			}
+			allow_archetype EVALUATION[at0015] matches {    -- Orientacion
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.orientacion\.v0/}
+			}
+			allow_archetype EVALUATION[at0016] matches {    -- ActividadPsicomotora
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.actividad_psicomotora\.v0/}
+			}
+			allow_archetype EVALUATION[at0017] matches {    -- Periodo Atencion
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.periodo_de_atencion\.v0/}
+			}
+			EVALUATION[at0008] occurrences matches {0..1} matches {    -- Estados mental funcionales
+				data matches {
+					ITEM_TREE[at0007] matches {    -- Item tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0010] matches {    -- Memoria Reciente
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0011] matches {    -- Funcionamiento del Lenguaje
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0012] matches {    -- Juicio e Inteligencia
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Estado Mental">
+					description = <"Estado Mental">
+				>
+				["at0007"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Estados mental funcionales">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Memoria Reciente">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Funcionamiento del Lenguaje">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Juicio e Inteligencia">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Actitud">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Apariencia">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Orientacion">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"ActividadPsicomotora">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Periodo Atencion">
+					description = <"">
+				>
+			>
+		>
+	>
