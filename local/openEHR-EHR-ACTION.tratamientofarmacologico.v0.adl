@@ -1,0 +1,157 @@
+archetype (adl_version=1.4; uid=dc2d0eba-e4f3-4007-a996-1344e5ab192f)
+	openEHR-EHR-ACTION.tratamientofarmacologico.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a339ebb2c775eaba1e1f714f4bdd2b1e">
+		["build_uid"] = <"6a4858ce-9896-3a99-aac5-f51c58929ebb">
+	>
+
+definition
+	ACTION[at0000] matches {    -- TratamientoFarmacologico
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] matches {    -- Medicamento
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medicamento\.v1/}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {*}    -- Comentario
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0005] matches {    -- Recetado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0005]    -- Recetado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0006] matches {    -- Suspendido
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::530]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0006]    -- Suspendido
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0007] matches {    -- Activo
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::245]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0007]    -- Activo
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0008] matches {    -- Completado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0008]    -- Completado
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"TratamientoFarmacologico">
+					description = <"TratamientoFarmacologico">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Medicamento">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Comentario">
+					description = <"Sobre el Tratamiento
+">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Recetado">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Suspendido">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Activo">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Completado">
+					description = <"">
+				>
+			>
+		>
+	>
