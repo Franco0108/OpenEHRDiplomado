@@ -1,0 +1,144 @@
+archetype (adl_version=1.4; uid=4324af45-51f3-4154-b270-9e8213f92091)
+	openEHR-EHR-OBSERVATION.usomusculos.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"267763b70d40d1c6a6af344cdd60d664">
+		["build_uid"] = <"659bbc6b-ce52-392f-87d4-98859c089cef">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- UsoMusculos
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] matches {    -- Presion Inspiratoria Maxima
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::125]>
+												list = <
+													["1"] = <
+														units = <"cm[H2O]">
+														precision = <|1|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"cmH₂O">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0005] matches {    -- Presion Expiratoria Maxima
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::125]>
+												list = <
+													["1"] = <
+														units = <"cm[H2O]">
+														precision = <|1|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"cmH₂O">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0006] matches {    -- Ventilacion Voluntaria Maxima
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0007] matches {    -- Prueba de Inhalacion Rapida
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Fecha de Registro
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {PT6S}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"UsoMusculos">
+					description = <"UsoMusculos">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Presion Inspiratoria Maxima">
+					description = <"">
+				>
+				["cm[H2O]"] = <
+					text = <"cm[H2O]">
+					description = <"centimeters of water column">
+				>
+				["at0005"] = <
+					text = <"Presion Expiratoria Maxima">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Ventilacion Voluntaria Maxima">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Prueba de Inhalacion Rapida">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Fecha de Registro">
+					description = <"">
+				>
+			>
+		>
+	>
