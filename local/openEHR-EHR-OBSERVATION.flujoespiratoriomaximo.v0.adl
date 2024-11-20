@@ -1,0 +1,105 @@
+archetype (adl_version=1.4; uid=0a05c055-1dce-4f7a-82b4-ffe85ea463c3)
+	openEHR-EHR-OBSERVATION.flujoespiratoriomaximo.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1e1acd2effbed1dce8d7d0b26f07f855">
+		["build_uid"] = <"93d1e137-232c-3e8f-876e-d23540823ed0">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- FlujoEspiratorioMAximo
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0009] matches {    -- volumen
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::129]>
+												list = <
+													["1"] = <
+														units = <"L">
+														precision = <|0|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"l">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0011] matches {    -- FechaRegistro
+										value matches {
+											DV_DATE_TIME matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"FlujoEspiratorioMAximo">
+					description = <"FlujoEspiratorioMaximo">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0009"] = <
+					text = <"volumen">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"FechaRegistro">
+					description = <"">
+				>
+			>
+		>
+	>
