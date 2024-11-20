@@ -1,0 +1,99 @@
+archetype (adl_version=1.4; uid=3cbd043a-0bce-409e-ab71-e033e31d6df1)
+	openEHR-EHR-EVALUATION.orientacion.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"83bf1e343fee8471b4e47c6f2762ea69">
+		["build_uid"] = <"f74b4560-0176-38f2-81a9-2ac9a1b836f5">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Orientacion
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- ¿Nombre Completo?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- ¿Edad?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- ¿Donde Vive?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- ¿Dia Hora?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- ¿Estacion del año?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Orientacion">
+					description = <"Orientacion">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"¿Nombre Completo?">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"¿Edad?">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"¿Donde Vive?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"¿Dia Hora?">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"¿Estacion del año?">
+					description = <"">
+				>
+			>
+		>
+	>
