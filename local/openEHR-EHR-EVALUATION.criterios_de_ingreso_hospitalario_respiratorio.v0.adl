@@ -1,0 +1,117 @@
+archetype (adl_version=1.4; uid=c585f695-d36e-4c57-aa2c-ba62591d1a87)
+	openEHR-EHR-EVALUATION.criterios_de_ingreso_hospitalario_respiratorio.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"730d5a3439e4ed4a416ea63cade60c66">
+		["build_uid"] = <"d278f005-2847-37e7-86a3-0358382fa300">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Criterios de Ingreso Hospitalario Respiratorio
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- ¿Respuesta deficiente al Tratamiento?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0003] matches {    -- ¿Saturacion menor al 90?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0004] matches {    -- ¿Flujo respiratorio deficiente?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0005] matches {    -- ¿Comorbilidades significativas?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0006] matches {    -- ¿Antecedente de agravantes?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0007] matches {    -- ¿Factores sociales de riesgo?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Comentario
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Criterios de Ingreso Hospitalario Respiratorio">
+					description = <"Criterios de Ingreso Hospitalario REspiratorio">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"¿Respuesta deficiente al Tratamiento?">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"¿Saturacion menor al 90?">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"¿Flujo respiratorio deficiente?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"¿Comorbilidades significativas?">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"¿Antecedente de agravantes?">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"¿Factores sociales de riesgo?">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Comentario">
+					description = <"">
+				>
+			>
+		>
+	>
