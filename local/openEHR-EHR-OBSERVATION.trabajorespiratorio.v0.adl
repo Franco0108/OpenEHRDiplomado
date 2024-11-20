@@ -1,0 +1,134 @@
+archetype (adl_version=1.4; uid=f87c555c-feed-4394-a15b-24a35a5ddaf7)
+	openEHR-EHR-OBSERVATION.trabajorespiratorio.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-19">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4ec1533e30db26858a87bbd5878a5ba0">
+		["build_uid"] = <"da51292e-76ea-3364-8c70-ff50dc8c7af1">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- TrabajoRespiratorio
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0006] matches {    -- Item tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0009] matches {    -- FVC
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::126]>
+												list = <
+													["1"] = <
+														units = <"l/s">
+														precision = <|1|>
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"l/s">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0010] matches {    -- FEV1
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::126]>
+												list = <
+													["1"] = <
+														units = <"l/s">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"l/s">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Fecha Hora Registro
+										value matches {
+											DV_DATE_TIME matches {
+												value matches {yyyy-mm-ddThh:mm:ss}
+											}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {PT6S}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"TrabajoRespiratorio">
+					description = <"TrabajoRespiratorio">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["l/s"] = <
+					text = <"l/s">
+					description = <"l/s">
+				>
+				["at0005"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0008"] = <
+					text = <"Fecha Hora Registro">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"FVC">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"FEV1">
+					description = <"">
+				>
+			>
+		>
+	>
