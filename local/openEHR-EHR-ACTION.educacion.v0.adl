@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"565bff74bfb0de4a247a03149d14f68e">
+		["MD5-CAM-1.0.1"] = <"66f60f578a867fdffa59edf6787259b7">
 		["build_uid"] = <"82fd73a1-e13d-35b7-baec-c4eb97844913">
 	>
 
@@ -32,7 +32,7 @@ definition
 		description matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Documento Entregar
+					ELEMENT[at0002] matches {    -- Documento Entregar
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -44,11 +44,6 @@ definition
 									at0008]    -- Importancia del cumplimiento con la medicación
 								}
 							}
-						}
-					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Fecha de Entrega
-						value matches {
-							DV_DATE_TIME matches {*}
 						}
 					}
 				}
@@ -144,10 +139,6 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Identificar y evitar desencadenantes">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"Fecha de Entrega">
 					description = <"">
 				>
 				["at0006"] = <
