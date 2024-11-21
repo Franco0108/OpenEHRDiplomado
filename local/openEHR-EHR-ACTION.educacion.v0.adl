@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2973988f89a24f5ef23f57d67feca79e">
+		["MD5-CAM-1.0.1"] = <"e8b5495c7d71501f28ab625d450c61c0">
 		["build_uid"] = <"82fd73a1-e13d-35b7-baec-c4eb97844913">
 	>
 
@@ -32,18 +32,21 @@ definition
 		description matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Documento Entregar
+					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Documento Entregar
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0003,    -- Plan de uso inhalador
-									at0004]    -- que hacer en caso de emergencia
+									at0003,    -- Técnica adecuada de inhalación
+									at0004,    -- Identificar y evitar desencadenantes
+									at0006,    -- Desarrollo de un plan de acción
+									at0007,    -- Reconocimiento de señales de advertencia
+									at0008]    -- Importancia del cumplimiento con la medicación
 								}
 							}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Fecha de Registro
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Fecha de Entrega
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -70,15 +73,27 @@ ontology
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"Plan de uso inhalador">
+					text = <"Técnica adecuada de inhalación">
 					description = <"">
 				>
 				["at0004"] = <
-					text = <"que hacer en caso de emergencia">
+					text = <"Identificar y evitar desencadenantes">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Fecha de Registro">
+					text = <"Fecha de Entrega">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Desarrollo de un plan de acción">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Reconocimiento de señales de advertencia">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Importancia del cumplimiento con la medicación">
 					description = <"">
 				>
 			>
