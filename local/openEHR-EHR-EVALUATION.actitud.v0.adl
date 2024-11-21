@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e455a044bf5736b04d764d20ec87ebc8">
+		["MD5-CAM-1.0.1"] = <"4f5ae1575bbc818cb303a892e86e2cf0">
 		["build_uid"] = <"a12dc163-5a97-3d04-b15b-1f8a9c154e6d">
 	>
 
@@ -32,18 +32,21 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] matches {    -- Amigable
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Amigable
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
 					}
-					ELEMENT[at0003] matches {    -- Cooperativo
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Cooperativo
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
 		}
 	}
 
@@ -66,6 +69,10 @@ ontology
 				["at0003"] = <
 					text = <"Cooperativo">
 					description = <"">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
 				>
 			>
 		>
