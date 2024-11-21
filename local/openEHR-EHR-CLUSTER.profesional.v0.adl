@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f1cc23ca8869173709f28f50163655cb">
+		["MD5-CAM-1.0.1"] = <"ad0f32060d1c2dd0f4c94fcd43633622">
 		["build_uid"] = <"557d4264-28d7-31b0-a9cf-8a0d284dde70">
 	>
 
@@ -50,14 +50,14 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..1} matches {    -- FechaNacimiento
+			ELEMENT[at0007] matches {    -- FechaNacimiento
 				value matches {
 					DV_DATE_TIME matches {
 						value matches {yyyy-mm-ddTXX:XX:XX}
 					}
 				}
 			}
-			ELEMENT[at0010] occurrences matches {0..1} matches {    -- SexoBiologico
+			ELEMENT[at0010] matches {    -- SexoBiologico
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -71,7 +71,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0009] matches {    -- Titulo Profesional
+			ELEMENT[at0009] matches {    -- Profesión
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -108,7 +108,7 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"Titulo Profesional">
+					text = <"Profesión">
 					description = <"">
 				>
 				["at0010"] = <
