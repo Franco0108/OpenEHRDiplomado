@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ba6f07f843cc0678a6ed6570959a28b8">
+		["MD5-CAM-1.0.1"] = <"0359f0b55a8b050fdb094acccfd7be14">
 		["build_uid"] = <"f94760ec-edee-34f9-8428-5ea37fe2c519">
 	>
 
@@ -39,6 +39,13 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0010] matches {    -- Fecha Registro
+										value matches {
+											DV_DATE_TIME matches {
+												value matches {yyyy-mm-ddThh:XX:XX}
+											}
+										}
+									}
 									ELEMENT[at0004] matches {    -- Temperatura
 										value matches {
 											C_DV_QUANTITY <
@@ -110,11 +117,6 @@ definition
 											>
 										}
 									}
-									ELEMENT[at0010] matches {    -- Registro
-										value matches {
-											DV_DATE_TIME matches {*}
-										}
-									}
 								}
 							}
 						}
@@ -173,7 +175,7 @@ ontology
 					description = <"millimeters of mercury">
 				>
 				["at0010"] = <
-					text = <"Registro">
+					text = <"Fecha Registro">
 					description = <"">
 				>
 			>
