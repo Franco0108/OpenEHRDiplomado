@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ff117fc6042ed631957ba6e6358f3692">
+		["MD5-CAM-1.0.1"] = <"f0283d48dca805a00a22dc8992e81a31">
 		["build_uid"] = <"ec6a424a-296f-3840-8ee5-53587f839cde">
 	>
 
@@ -33,6 +33,18 @@ definition
 			allow_archetype OBSERVATION[at0001] occurrences matches {1..*} matches {    -- Signos Vitales
 				include
 					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.signos_vitales\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0002] occurrences matches {1..*} matches {    -- Tratamiento
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
+			}
+			allow_archetype OBSERVATION[at0003] occurrences matches {0..*} matches {    -- Monitoreo
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.monitoreo\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0005] occurrences matches {1..*} matches {    -- Educacion
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.educacion\.v0/}
 			}
 		}
 	}
@@ -47,6 +59,18 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Signos Vitales">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Tratamiento">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Monitoreo">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Educacion">
 					description = <"">
 				>
 			>
