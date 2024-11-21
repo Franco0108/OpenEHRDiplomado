@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e8b5495c7d71501f28ab625d450c61c0">
+		["MD5-CAM-1.0.1"] = <"565bff74bfb0de4a247a03149d14f68e">
 		["build_uid"] = <"82fd73a1-e13d-35b7-baec-c4eb97844913">
 	>
 
@@ -49,6 +49,72 @@ definition
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Fecha de Entrega
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0009] matches {    -- Planificado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0009]    -- Planificado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0010] matches {    -- Entregado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0010]    -- Entregado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0011] matches {    -- Creado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0011]    -- Creado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0012] matches {    -- Agenda
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0012]    -- Agenda
 						}
 					}
 				}
@@ -94,6 +160,22 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Importancia del cumplimiento con la medicación">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Planificado">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Entregado">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Creado">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Agenda">
 					description = <"">
 				>
 			>
