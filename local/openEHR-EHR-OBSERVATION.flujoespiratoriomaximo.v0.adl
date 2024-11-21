@@ -23,12 +23,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1e1acd2effbed1dce8d7d0b26f07f855">
+		["MD5-CAM-1.0.1"] = <"84e8b51b3d506b67ef909683ad517c96">
 		["build_uid"] = <"93d1e137-232c-3e8f-876e-d23540823ed0">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- FlujoEspiratorioMAximo
+	OBSERVATION[at0000] matches {    -- FlujoEspiratorioMaximo
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -73,7 +73,7 @@ ontology
 		["es-cl"] = <
 			items = <
 				["at0000"] = <
-					text = <"FlujoEspiratorioMAximo">
+					text = <"FlujoEspiratorioMaximo">
 					description = <"FlujoEspiratorioMaximo">
 				>
 				["at0001"] = <
