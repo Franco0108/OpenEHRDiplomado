@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f0283d48dca805a00a22dc8992e81a31">
+		["MD5-CAM-1.0.1"] = <"c5e016bb21b10b82b3cef0881ef9f1db">
 		["build_uid"] = <"ec6a424a-296f-3840-8ee5-53587f839cde">
 	>
 
@@ -45,6 +45,10 @@ definition
 			allow_archetype INSTRUCTION[at0005] occurrences matches {1..*} matches {    -- Educacion
 				include
 					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.educacion\.v0/}
+			}
+			allow_archetype OBSERVATION[at0006] occurrences matches {1..*} matches {    -- Evaluacion Diaria
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.evaluacion_diaria\.v0/}
 			}
 		}
 	}
@@ -71,6 +75,10 @@ ontology
 				>
 				["at0005"] = <
 					text = <"Educacion">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Evaluacion Diaria">
 					description = <"">
 				>
 			>
