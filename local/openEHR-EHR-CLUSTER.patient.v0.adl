@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"583864a4a35cb47e5f67625b589c473f">
+		["MD5-CAM-1.0.1"] = <"1204825fcd54da8c4c9bd9a6bd86aa42">
 		["build_uid"] = <"eed24fe3-e100-3c4c-b671-25551abb7b41">
 	>
 
@@ -35,12 +35,12 @@ definition
 					DV_IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Nombres
+			ELEMENT[at0002] occurrences matches {1..*} matches {    -- Nombres
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Primer Apellido
+			ELEMENT[at0004] matches {    -- Primer Apellido
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -48,6 +48,13 @@ definition
 			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Segundo Apelliodo
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0013] matches {    -- Fecha Nacimiento
+				value matches {
+					DV_DATE_TIME matches {
+						value matches {yyyy-mm-ddTXX:XX:XX}
+					}
 				}
 			}
 			ELEMENT[at0007] occurrences matches {0..1} matches {    -- SexoBiologico
@@ -113,6 +120,10 @@ ontology
 				>
 				["at0012"] = <
 					text = <"Ninguno">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Fecha Nacimiento">
 					description = <"">
 				>
 			>
