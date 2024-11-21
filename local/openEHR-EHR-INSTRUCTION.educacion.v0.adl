@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ae04ded482513dea65451d8e0ddae369">
+		["MD5-CAM-1.0.1"] = <"6f74d572368819249222c4cc7279e557">
 		["build_uid"] = <"735a4863-db87-3a09-b345-65e46252526a">
 	>
 
@@ -32,7 +32,15 @@ definition
 		activities cardinality matches {0..*; unordered} matches {
 			ACTIVITY[at0001] matches {    -- Current Activity
 				description matches {
-					ITEM_TREE[at0002] matches {*}    -- Tree
+					ITEM_TREE[at0002] matches {    -- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] occurrences matches {0..1} matches {    -- Entrega del Documento
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
 				}
 				action_archetype_id matches {/openEHR-EHR-ACTION\.educacion\.v0/}
 			}
@@ -54,6 +62,10 @@ ontology
 				["at0002"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Entrega del Documento">
+					description = <"">
 				>
 			>
 		>
