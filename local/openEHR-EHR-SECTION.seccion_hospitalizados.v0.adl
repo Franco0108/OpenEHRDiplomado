@@ -1,0 +1,54 @@
+archetype (adl_version=1.4; uid=ccff1761-253e-4015-9b01-98e03c37d158)
+	openEHR-EHR-SECTION.seccion_hospitalizados.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ff117fc6042ed631957ba6e6358f3692">
+		["build_uid"] = <"ec6a424a-296f-3840-8ee5-53587f839cde">
+	>
+
+definition
+	SECTION[at0000] matches {    -- Seccion Hospitalizados
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0001] occurrences matches {1..*} matches {    -- Signos Vitales
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.signos_vitales\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Seccion Hospitalizados">
+					description = <"Seccion Hospitalizados">
+				>
+				["at0001"] = <
+					text = <"Signos Vitales">
+					description = <"">
+				>
+			>
+		>
+	>
