@@ -1,0 +1,71 @@
+archetype (adl_version=1.4; uid=d444528a-ca4d-433e-b6e2-8672933cb720)
+	openEHR-EHR-INSTRUCTION.planificacion_seguimiento.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-21">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9d77b6975e258c2d3b422bf0f935ee70">
+		["build_uid"] = <"7dd2ef32-05f9-3baf-8669-dcc95348a8d0">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- planificacion seguimiento
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] matches {    -- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {    -- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] matches {    -- Entrega del Documento
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"planificacion seguimiento">
+					description = <"planificacion seguimiento">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Entrega del Documento">
+					description = <"">
+				>
+			>
+		>
+	>
