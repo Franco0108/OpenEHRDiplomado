@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4ec1533e30db26858a87bbd5878a5ba0">
+		["MD5-CAM-1.0.1"] = <"d7d527caf7fef816c5c4bc54bb56d16c">
 		["build_uid"] = <"da51292e-76ea-3364-8c70-ff50dc8c7af1">
 	>
 
@@ -36,6 +36,13 @@ definition
 						data matches {
 							ITEM_TREE[at0006] matches {    -- Item tree
 								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0008] matches {    -- Fecha Hora Registro
+										value matches {
+											DV_DATE_TIME matches {
+												value matches {yyyy-mm-ddThh:XX:XX}
+											}
+										}
+									}
 									ELEMENT[at0009] matches {    -- FVC
 										value matches {
 											C_DV_QUANTITY <
@@ -63,13 +70,6 @@ definition
 													>
 												>
 											>
-										}
-									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Fecha Hora Registro
-										value matches {
-											DV_DATE_TIME matches {
-												value matches {yyyy-mm-ddThh:mm:ss}
-											}
 										}
 									}
 								}
