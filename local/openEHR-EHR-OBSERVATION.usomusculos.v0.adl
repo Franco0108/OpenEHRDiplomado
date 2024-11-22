@@ -23,12 +23,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"267763b70d40d1c6a6af344cdd60d664">
+		["MD5-CAM-1.0.1"] = <"fda2046146b6ce052c975f531682bb3a">
 		["build_uid"] = <"659bbc6b-ce52-392f-87d4-98859c089cef">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- UsoMusculos
+	OBSERVATION[at0000] matches {    -- Uso Músculos Respiratorios
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -36,7 +36,14 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] matches {    -- Presion Inspiratoria Maxima
+									ELEMENT[at0009] matches {    -- Fecha de Registro
+										value matches {
+											DV_DATE_TIME matches {
+												value matches {yyyy-mm-ddThh:XX:XX}
+											}
+										}
+									}
+									ELEMENT[at0004] matches {    -- PIM
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::125]>
@@ -51,7 +58,7 @@ definition
 											>
 										}
 									}
-									ELEMENT[at0005] matches {    -- Presion Expiratoria Maxima
+									ELEMENT[at0005] matches {    -- PEM
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::125]>
@@ -66,19 +73,14 @@ definition
 											>
 										}
 									}
-									ELEMENT[at0006] matches {    -- Ventilacion Voluntaria Maxima
+									ELEMENT[at0006] matches {    -- VVM
 										value matches {
 											DV_TEXT matches {*}
 										}
 									}
-									ELEMENT[at0007] matches {    -- Prueba de Inhalacion Rapida
+									ELEMENT[at0007] matches {    -- PIR
 										value matches {
 											DV_TEXT matches {*}
-										}
-									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Fecha de Registro
-										value matches {
-											DV_DATE_TIME matches {*}
 										}
 									}
 								}
@@ -100,7 +102,7 @@ ontology
 		["es-cl"] = <
 			items = <
 				["at0000"] = <
-					text = <"UsoMusculos">
+					text = <"Uso Músculos Respiratorios">
 					description = <"UsoMusculos">
 				>
 				["at0001"] = <
@@ -116,7 +118,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Presion Inspiratoria Maxima">
+					text = <"PIM">
 					description = <"">
 				>
 				["cm[H2O]"] = <
@@ -124,15 +126,15 @@ ontology
 					description = <"centimeters of water column">
 				>
 				["at0005"] = <
-					text = <"Presion Expiratoria Maxima">
+					text = <"PEM">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"Ventilacion Voluntaria Maxima">
+					text = <"VVM">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"Prueba de Inhalacion Rapida">
+					text = <"PIR">
 					description = <"">
 				>
 				["at0009"] = <
