@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1204825fcd54da8c4c9bd9a6bd86aa42">
+		["MD5-CAM-1.0.1"] = <"a476e8df879ccb747cd0aaa309b564eb">
 		["build_uid"] = <"eed24fe3-e100-3c4c-b671-25551abb7b41">
 	>
 
@@ -57,7 +57,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0007] occurrences matches {0..1} matches {    -- SexoBiologico
+			ELEMENT[at0007] matches {    -- SexoBiologico
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
