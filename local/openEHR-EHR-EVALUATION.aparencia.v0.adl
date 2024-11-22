@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0d55eb18b59e5894cacb46046b6d4b95">
+		["MD5-CAM-1.0.1"] = <"24c40e8d3a92913d0bf635afc775ed05">
 		["build_uid"] = <"18c68466-7b75-37af-abe0-85411eff1fc0">
 	>
 
@@ -37,22 +37,22 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0003] matches {    -- Vestimenta
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Bienestar
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0004] matches {    -- Nivel General de Bienestar
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Nivel General de Bienestar
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0005] matches {    -- Sexo
+					ELEMENT[at0005] matches {    -- Sexo Biológico
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0006] matches {    -- Arreglo Personal
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Arreglo Personal
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -67,12 +67,12 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0009] matches {    -- Postura
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Postura
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0010] matches {    -- Contacto Visual
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Contacto Visual
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -99,7 +99,7 @@ ontology
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"Vestimenta">
+					text = <"Bienestar">
 					description = <"">
 				>
 				["at0004"] = <
@@ -107,7 +107,7 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Sexo">
+					text = <"Sexo Biológico">
 					description = <"">
 				>
 				["at0006"] = <
