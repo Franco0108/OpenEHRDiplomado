@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"98f9d331f0c8e44189968c25be8ceec8">
+		["MD5-CAM-1.0.1"] = <"3bbed17a2a23dead0164900599ec87a5">
 		["build_uid"] = <"763f52eb-cea5-319e-aa13-8ab644df4b64">
 	>
 
@@ -31,7 +31,7 @@ definition
 	CLUSTER[at0000] matches {    -- Medicamento
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0005] matches {*}    -- NombreFarmaco
-			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Concentración
+			ELEMENT[at0004] matches {    -- Concentración
 				value matches {
 					C_DV_QUANTITY <
 						property = <[openehr::119]>
