@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"83bf1e343fee8471b4e47c6f2762ea69">
+		["MD5-CAM-1.0.1"] = <"7f4907c1d17e4180c7119f0958e03bc5">
 		["build_uid"] = <"f74b4560-0176-38f2-81a9-2ac9a1b836f5">
 	>
 
@@ -32,17 +32,17 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- ¿Nombre Completo?
+					ELEMENT[at0002] matches {    -- ¿Nombre Completo?
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {    -- ¿Edad?
+					ELEMENT[at0003] matches {    -- ¿Edad?
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {    -- ¿Donde Vive?
+					ELEMENT[at0004] matches {    -- ¿Donde Vive?
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
