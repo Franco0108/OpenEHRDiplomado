@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"01c6d426117812d28bb41c7360184586">
+		["MD5-CAM-1.0.1"] = <"90ce9902afe1de620ba1e92e5bf2f2ec">
 		["build_uid"] = <"060f0bf2-6ebb-32c0-9c50-0d8de0b1600c">
 	>
 
@@ -43,7 +43,9 @@ definition
 									}
 									ELEMENT[at0006] matches {    -- Registro
 										value matches {
-											DV_DATE_TIME matches {*}
+											DV_DATE_TIME matches {
+												value matches {yyyy-mm-ddThh:XX:XX}
+											}
 										}
 									}
 								}
