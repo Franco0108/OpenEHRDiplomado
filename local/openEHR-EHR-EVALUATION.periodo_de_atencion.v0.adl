@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3469ccf9bdb4c364059f2e6d0aea8665">
+		["MD5-CAM-1.0.1"] = <"b7d4fce7b53faab3a8019b5c9033531f">
 		["build_uid"] = <"393c93d1-8ff3-38db-ac1a-284eb197dcad">
 	>
 
@@ -37,7 +37,7 @@ definition
 							DV_BOOLEAN matches {*}
 						}
 					}
-					ELEMENT[at0004] matches {    -- Capacidad de Resolver Problemas
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Capacidad de Resolver Problemas
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
@@ -47,12 +47,17 @@ definition
 							DV_BOOLEAN matches {*}
 						}
 					}
-					ELEMENT[at0006] matches {    -- Deletro de palabras
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Distracción
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
 					}
-					ELEMENT[at0007] matches {    -- Repetir 7 numeros en orden ascendente y 5 en orden inverso
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Deletro de palabras
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Repetir 7 numeros en orden ascendente y 5 en orden inverso
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
@@ -92,6 +97,10 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Repetir 7 numeros en orden ascendente y 5 en orden inverso">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Distracción">
 					description = <"">
 				>
 			>
