@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d718d0e67cc82d411f78414019721eda">
+		["MD5-CAM-1.0.1"] = <"b386cf288c3c3778151c692d926a2c7d">
 		["build_uid"] = <"6645e717-d426-39fc-825a-b5f8be76f936">
 	>
 
@@ -32,7 +32,7 @@ definition
 		description matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Documento Entregar
+					ELEMENT[at0002] matches {    -- Documento Entregar
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
