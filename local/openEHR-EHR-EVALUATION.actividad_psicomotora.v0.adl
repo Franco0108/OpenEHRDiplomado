@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4c15b91aa32387443af41aa9d72d2b67">
+		["MD5-CAM-1.0.1"] = <"30f671a66697663c1824bfa40117a8e2">
 		["build_uid"] = <"1fe28d58-c29c-3e3d-a811-3f53486b2bc4">
 	>
 
@@ -32,7 +32,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] matches {    -- Estado Emocional
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Estado Emocional
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -44,7 +44,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0006] matches {    -- Expresion Corporal
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Expresion Corporal
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
