@@ -23,30 +23,30 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"abfe45b769268c11bbdc23c61c5afb66">
+		["MD5-CAM-1.0.1"] = <"3237efc5092cb65143642f081f07ca41">
 		["build_uid"] = <"fa9b570d-4d83-3328-af1d-96fd095d34c3">
 	>
 
 definition
 	SECTION[at0000] matches {    -- Estado Mental
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype EVALUATION[at0014] matches {    -- Apariencia
+			allow_archetype EVALUATION[at0014] occurrences matches {0..1} matches {    -- Apariencia
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.aparencia\.v0/}
 			}
-			allow_archetype EVALUATION[at0013] matches {    -- Actitud
+			allow_archetype EVALUATION[at0013] occurrences matches {0..1} matches {    -- Actitud
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.actitud\.v0/}
 			}
-			allow_archetype EVALUATION[at0015] matches {    -- Orientacion
+			allow_archetype EVALUATION[at0015] occurrences matches {0..1} matches {    -- Orientacion
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.orientacion\.v0/}
 			}
-			allow_archetype EVALUATION[at0016] matches {    -- ActividadPsicomotora
+			allow_archetype EVALUATION[at0016] occurrences matches {0..1} matches {    -- ActividadPsicomotora
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.actividad_psicomotora\.v0/}
 			}
-			allow_archetype EVALUATION[at0017] matches {    -- Periodo Atencion
+			allow_archetype EVALUATION[at0017] occurrences matches {0..1} matches {    -- Periodo Atencion
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.periodo_de_atencion\.v0/}
 			}
@@ -54,17 +54,17 @@ definition
 				data matches {
 					ITEM_TREE[at0007] matches {    -- Item tree
 						items cardinality matches {0..*; unordered} matches {
-							ELEMENT[at0010] matches {    -- Memoria Reciente
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Memoria Reciente
 								value matches {
 									DV_BOOLEAN matches {*}
 								}
 							}
-							ELEMENT[at0011] matches {    -- Funcionamiento del Lenguaje
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Funcionamiento del Lenguaje
 								value matches {
 									DV_BOOLEAN matches {*}
 								}
 							}
-							ELEMENT[at0012] matches {    -- Juicio e Inteligencia
+							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Juicio e Inteligencia
 								value matches {
 									DV_BOOLEAN matches {*}
 								}
