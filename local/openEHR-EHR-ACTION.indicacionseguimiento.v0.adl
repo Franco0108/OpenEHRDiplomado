@@ -1,0 +1,161 @@
+archetype (adl_version=1.4; uid=9bc72ee0-9872-4c79-a1bf-ee836fea306d)
+	openEHR-EHR-ACTION.indicacionseguimiento.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"b59c0fe2-e818-3bb7-8a52-2a3cd1a84cdd">
+		["MD5-CAM-1.0.1"] = <"980d8c0d5a0c315d93b134658d0aa1a1">
+	>
+
+definition
+	ACTION[at0000] matches {    -- IndicacionSeguimiento
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Indicacion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Comentario
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0005] matches {    -- Creado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0005]    -- Creado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0006] matches {    -- Agendado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0006]    -- Agendado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0007] matches {    -- Completado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0007]    -- Completado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0008] matches {    -- Pospuesto
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::530]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0008]    -- Pospuesto
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"IndicacionSeguimiento">
+					description = <"IndicacionSeguimiento">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Indicacion">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Comentario">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Creado">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Agendado">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Completado">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Pospuesto">
+					description = <"">
+				>
+			>
+		>
+	>
