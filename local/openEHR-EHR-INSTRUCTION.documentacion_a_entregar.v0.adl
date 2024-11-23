@@ -1,0 +1,92 @@
+archetype (adl_version=1.4; uid=d3977b63-eb5b-4183-942e-7932a41fc20a)
+	openEHR-EHR-INSTRUCTION.documentacion_a_entregar.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"919c1f73e84416e0e3ee0b5342156ecf">
+		["build_uid"] = <"735a4863-db87-3a09-b345-65e46252526a">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- documentacion_a entregar
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] matches {    -- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {    -- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] matches {    -- Registro de la educación
+								value matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddThh:mm:XX}
+									}
+								}
+							}
+							ELEMENT[at0005] matches {    -- Entrega del documento
+								value matches {
+									DV_BOOLEAN matches {*}
+								}
+							}
+							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Comentario
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+				action_archetype_id matches {/openEHR-EHR-ACTION\.educacion\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"documentacion_a entregar">
+					description = <"Educacion">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Registro de la educación">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Comentario">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Entrega del documento">
+					description = <"">
+				>
+			>
+		>
+	>
