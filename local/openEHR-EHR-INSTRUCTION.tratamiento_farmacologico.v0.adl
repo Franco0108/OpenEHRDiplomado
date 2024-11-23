@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5a300fb94bd4b8741d7d43be907e5621">
+		["MD5-CAM-1.0.1"] = <"847dfd4d88a6b0bf58f6d78e10c9c14b">
 		["build_uid"] = <"e5ac375e-8e73-3c27-b89f-8219695f4b08">
 	>
 
@@ -86,6 +86,11 @@ definition
 									>
 								}
 							}
+							ELEMENT[at0013] occurrences matches {0..1} matches {    -- Comentario
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
 						}
 					}
 				}
@@ -121,6 +126,10 @@ ontology
 				>
 				["at0012"] = <
 					text = <"Frecuencia">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Comentario">
 					description = <"">
 				>
 			>
