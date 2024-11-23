@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"66f60f578a867fdffa59edf6787259b7">
+		["MD5-CAM-1.0.1"] = <"e54a4319462f20cc7db2099d3c50b745">
 		["build_uid"] = <"82fd73a1-e13d-35b7-baec-c4eb97844913">
 	>
 
@@ -32,7 +32,7 @@ definition
 		description matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] matches {    -- Documento Entregar
+					ELEMENT[at0002] matches {    -- Educación
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -130,7 +130,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Documento Entregar">
+					text = <"Educación">
 					description = <"">
 				>
 				["at0003"] = <
