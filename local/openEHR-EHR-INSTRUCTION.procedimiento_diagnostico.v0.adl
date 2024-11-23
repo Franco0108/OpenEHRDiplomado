@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6a8cdb26ca723b318c7f9264218f1c73">
+		["MD5-CAM-1.0.1"] = <"5d6ad901438852f35117a7f7391c0123">
 		["build_uid"] = <"dc832b54-899b-3d9a-9cbb-88fda062d6b4">
 	>
 
@@ -34,6 +34,13 @@ definition
 				description matches {
 					ITEM_TREE[at0002] matches {    -- Tree
 						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0004] matches {    -- Fecha de agenda
+								value matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddThh:mm:XX}
+									}
+								}
+							}
 							ELEMENT[at0003] occurrences matches {0..1} matches {    -- Comentarios
 								value matches {
 									DV_TEXT matches {*}
@@ -65,6 +72,10 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Comentarios">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Fecha de agenda">
 					description = <"">
 				>
 			>
