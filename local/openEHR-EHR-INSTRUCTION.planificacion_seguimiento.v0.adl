@@ -1,0 +1,83 @@
+archetype (adl_version=1.4; uid=7f64d4a0-82c1-4c81-a7be-cc8643a8ec8f)
+	openEHR-EHR-INSTRUCTION.planificacion_seguimiento.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6d64b97fc02ba23b91eb984f93f255bc">
+		["build_uid"] = <"7dd2ef32-05f9-3baf-8669-dcc95348a8d0">
+	>
+
+definition
+	INSTRUCTION[at0000] matches {    -- Planificacion Seguimiento
+		activities cardinality matches {0..*; unordered} matches {
+			ACTIVITY[at0001] matches {    -- Current Activity
+				description matches {
+					ITEM_TREE[at0002] matches {    -- Tree
+						items cardinality matches {0..*; unordered} matches {
+							ELEMENT[at0003] matches {    -- Agendamiento indicación
+								value matches {
+									DV_DATE_TIME matches {
+										value matches {yyyy-mm-ddThh:XX:XX}
+									}
+								}
+							}
+							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Comentario
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+				action_archetype_id matches {/openEHR-EHR-ACTION\.planificacion_de_segumiento\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Planificacion Seguimiento">
+					description = <"Planificacion Seguimiento">
+				>
+				["at0001"] = <
+					text = <"Current Activity">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Agendamiento indicación">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Comentario">
+					description = <"">
+				>
+			>
+		>
+	>
