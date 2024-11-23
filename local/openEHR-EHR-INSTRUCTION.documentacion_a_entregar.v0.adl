@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"919c1f73e84416e0e3ee0b5342156ecf">
+		["MD5-CAM-1.0.1"] = <"1f469e11e4591008ea33dbff2d0f82ed">
 		["build_uid"] = <"735a4863-db87-3a09-b345-65e46252526a">
 	>
 
@@ -34,16 +34,11 @@ definition
 				description matches {
 					ITEM_TREE[at0002] matches {    -- Tree
 						items cardinality matches {0..*; unordered} matches {
-							ELEMENT[at0003] matches {    -- Registro de la educación
+							ELEMENT[at0003] matches {    -- Registro de la entrega
 								value matches {
 									DV_DATE_TIME matches {
 										value matches {yyyy-mm-ddThh:mm:XX}
 									}
-								}
-							}
-							ELEMENT[at0005] matches {    -- Entrega del documento
-								value matches {
-									DV_BOOLEAN matches {*}
 								}
 							}
 							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Comentario
@@ -54,7 +49,7 @@ definition
 						}
 					}
 				}
-				action_archetype_id matches {/openEHR-EHR-ACTION\.educacion\.v0/}
+				action_archetype_id matches {/openEHR-EHR-ACTION\.documentacion_a_entregar\.v0/}
 			}
 		}
 	}
@@ -76,15 +71,11 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0003"] = <
-					text = <"Registro de la educación">
+					text = <"Registro de la entrega">
 					description = <"">
 				>
 				["at0004"] = <
 					text = <"Comentario">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"Entrega del documento">
 					description = <"">
 				>
 			>
