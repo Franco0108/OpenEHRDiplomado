@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8b443f283d7d0f57d9e8637e1e21765f">
+		["MD5-CAM-1.0.1"] = <"d09cebb69ecba942bcb44a2b7dcbbc6e">
 		["build_uid"] = <"db769148-4c01-3dc9-b32d-cdec99354023">
 	>
 
@@ -51,7 +51,7 @@ definition
 									DV_BOOLEAN matches {*}
 								}
 							}
-							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Auscilacion
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Auscultación
 								value matches {
 									DV_BOOLEAN matches {*}
 								}
@@ -96,7 +96,7 @@ ontology
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"Auscilacion">
+					text = <"Auscultación">
 					description = <"">
 				>
 			>
