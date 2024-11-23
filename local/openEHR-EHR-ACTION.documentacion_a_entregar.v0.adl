@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"abb708a0be00967af5ff0581ab42e5e4">
+		["MD5-CAM-1.0.1"] = <"12009cd71272b5eff8fda55696a04e64">
 		["build_uid"] = <"82fd73a1-e13d-35b7-baec-c4eb97844913">
 	>
 
@@ -32,16 +32,16 @@ definition
 		description matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] matches {    -- Educación
+					ELEMENT[at0002] matches {    -- Documento
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0003,    -- Técnica adecuada de inhalación
-									at0004,    -- Identificar y evitar desencadenantes
-									at0006,    -- Desarrollo de un plan de acción
-									at0007,    -- Reconocimiento de señales de advertencia
-									at0008]    -- Importancia del cumplimiento con la medicación
+									at0003,    -- Resumen del alta
+									at0004,    -- Conciliación de la medicación
+									at0006,    -- Citas de seguimiento
+									at0007,    -- Plan de acción escrito para el asma
+									at0008]    -- Diario de flujo espiratorio máximo
 								}
 							}
 						}
@@ -130,27 +130,27 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Educación">
+					text = <"Documento">
 					description = <"">
 				>
 				["at0003"] = <
-					text = <"Técnica adecuada de inhalación">
+					text = <"Resumen del alta">
 					description = <"">
 				>
 				["at0004"] = <
-					text = <"Identificar y evitar desencadenantes">
+					text = <"Conciliación de la medicación">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"Desarrollo de un plan de acción">
+					text = <"Citas de seguimiento">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"Reconocimiento de señales de advertencia">
+					text = <"Plan de acción escrito para el asma">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"Importancia del cumplimiento con la medicación">
+					text = <"Diario de flujo espiratorio máximo">
 					description = <"">
 				>
 				["at0009"] = <
