@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a339ebb2c775eaba1e1f714f4bdd2b1e">
+		["MD5-CAM-1.0.1"] = <"78570d65f8fc6898f00ff6fa59122859">
 		["build_uid"] = <"6a4858ce-9896-3a99-aac5-f51c58929ebb">
 	>
 
@@ -108,6 +108,22 @@ definition
 					}
 				}
 			}
+			ISM_TRANSITION[at0009] matches {    -- Abortado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::531]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0009]    -- Abortado
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -150,6 +166,10 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Completado">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Abortado">
 					description = <"">
 				>
 			>
