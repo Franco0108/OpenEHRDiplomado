@@ -1,0 +1,185 @@
+archetype (adl_version=1.4; uid=85a64bff-4ecc-411e-bc8b-d445ebc4733b)
+	openEHR-EHR-ACTION.planificacion_de_segumiento.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"7b4f26cb-48b7-365b-b177-31e3e174c2e4">
+		["MD5-CAM-1.0.1"] = <"37e9161ffc95f96aa6db9eba69ee641f">
+	>
+
+definition
+	ACTION[at0000] matches {    -- planificacion de segumiento
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Indicación
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0003] matches {    -- creado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0003]    -- creado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0004] matches {    -- planificado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0004]    -- planificado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0005] matches {    -- agendado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0005]    -- agendado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0006] matches {    -- completado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0006]    -- completado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0008] matches {    -- cancelado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::528]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0008]    -- cancelado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0007] matches {    -- suspendido
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::530]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0007]    -- suspendido
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"planificacion de segumiento">
+					description = <"planificacion de segumiento">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Indicación">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"creado">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"planificado">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"agendado">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"completado">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"suspendido">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"cancelado">
+					description = <"">
+				>
+			>
+		>
+	>
