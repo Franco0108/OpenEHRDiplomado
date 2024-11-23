@@ -1,0 +1,100 @@
+archetype (adl_version=1.4; uid=1058b9e2-8363-4f88-9f1a-4fa10bbb59f0)
+	openEHR-EHR-ADMIN_ENTRY.rol.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"13138efa49c3fe6dc523fb53c90cfb66">
+		["build_uid"] = <"379d0581-9ab9-36f9-b539-cd5a52eb2291">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Rol
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Roles
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003,    -- Médico
+									at0004,    -- Enfermero/a
+									at0005,    -- Neumólogo
+									at0006,    -- Tens
+									at0007]    -- Broncopulmonar
+								}
+							}
+						}
+					}
+					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- Profesional
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.profesional\.v0/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Rol">
+					description = <"Rol">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Roles">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Médico">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Enfermero/a">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Neumólogo">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Tens">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Broncopulmonar">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Profesional">
+					description = <"">
+				>
+			>
+		>
+	>
