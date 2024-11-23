@@ -1,0 +1,174 @@
+archetype (adl_version=1.4; uid=0b52cc09-ff20-4662-9e61-5575caa59684)
+	openEHR-EHR-ACTION.documentacion_a_entregar.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"abb708a0be00967af5ff0581ab42e5e4">
+		["build_uid"] = <"82fd73a1-e13d-35b7-baec-c4eb97844913">
+	>
+
+definition
+	ACTION[at0000] matches {    -- documentacion_a entregar
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- Educación
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0003,    -- Técnica adecuada de inhalación
+									at0004,    -- Identificar y evitar desencadenantes
+									at0006,    -- Desarrollo de un plan de acción
+									at0007,    -- Reconocimiento de señales de advertencia
+									at0008]    -- Importancia del cumplimiento con la medicación
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		ism_transition matches {
+			ISM_TRANSITION[at0009] matches {    -- Planificado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::526]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0009]    -- Planificado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0010] matches {    -- Entregado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::532]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0010]    -- Entregado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0011] matches {    -- Creado
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::524]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0011]    -- Creado
+						}
+					}
+				}
+			}
+			ISM_TRANSITION[at0012] matches {    -- Agenda
+				current_state matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[openehr::529]
+						}
+					}
+				}
+				careflow_step matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0012]    -- Agenda
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"documentacion_a entregar">
+					description = <"Educacion">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Educación">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Técnica adecuada de inhalación">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Identificar y evitar desencadenantes">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Desarrollo de un plan de acción">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Reconocimiento de señales de advertencia">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Importancia del cumplimiento con la medicación">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Planificado">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Entregado">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Creado">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Agenda">
+					description = <"">
+				>
+			>
+		>
+	>
