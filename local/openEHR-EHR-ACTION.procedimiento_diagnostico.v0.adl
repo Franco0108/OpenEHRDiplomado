@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"78bbaab7ec909c1f5819d0045b7aa912">
+		["MD5-CAM-1.0.1"] = <"85953769df7c31678bfe3132d36cfdbb">
 		["build_uid"] = <"d18f6c62-0005-327f-8f39-0d7816690ba4">
 	>
 
@@ -39,11 +39,6 @@ definition
 									[ac0000]
 								}
 							}
-						}
-					}
-					ELEMENT[at0004] matches {    -- Fecha Agenda
-						value matches {
-							DV_DATE_TIME matches {*}
 						}
 					}
 				}
@@ -132,10 +127,6 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Procedimiento">
-					description = <"">
-				>
-				["at0004"] = <
-					text = <"Fecha Agenda">
 					description = <"">
 				>
 				["at0005"] = <
