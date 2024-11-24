@@ -23,30 +23,30 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6c74c0265dc12f074c3f10b5cbb4134c">
+		["MD5-CAM-1.0.1"] = <"a8aa9017635a19f477cdedc7fadd14a8">
 		["build_uid"] = <"0bad7d2d-9587-3bfc-b6a2-9aaa5c4d0eae">
 	>
 
 definition
 	SECTION[at0000] matches {    -- Hospitalizacion
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype OBSERVATION[at0001] matches {    -- Signos Vitales
+			allow_archetype OBSERVATION[at0001] occurrences matches {1..*} matches {    -- Signos Vitales
 				include
 					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.signos_vitales\.v0/}
 			}
-			allow_archetype INSTRUCTION[at0002] matches {    -- Tratamiento
+			allow_archetype INSTRUCTION[at0002] occurrences matches {1..*} matches {    -- Tratamiento
 				include
 					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
 			}
-			allow_archetype OBSERVATION[at0003] matches {    -- Monitoreo
+			allow_archetype OBSERVATION[at0003] occurrences matches {1..*} matches {    -- Monitoreo
 				include
 					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.monitoreo\.v0/}
 			}
-			allow_archetype INSTRUCTION[at0004] matches {    -- Educacion
+			allow_archetype INSTRUCTION[at0004] occurrences matches {1..*} matches {    -- Educacion
 				include
 					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.educacion\.v0/}
 			}
-			allow_archetype OBSERVATION[at0005] matches {    -- EvaluacionDiaria
+			allow_archetype OBSERVATION[at0005] occurrences matches {1..*} matches {    -- EvaluacionDiaria
 				include
 					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.evaluacion_diaria\.v0/}
 			}
