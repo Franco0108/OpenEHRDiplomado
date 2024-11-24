@@ -1,0 +1,96 @@
+archetype (adl_version=1.4; uid=f90ef92a-66f8-4e6e-b267-0997b1e46079)
+	openEHR-EHR-COMPOSITION.documentogeneral.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2ce101026deb4b499c2cf256e14cdc83">
+		["build_uid"] = <"b0940d6c-10a3-3d58-8554-ed6364623506">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- DocumentoGeneral
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {*}    -- Item tree
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype ADMIN_ENTRY[at0002] occurrences matches {0..*} matches {    -- Paciente
+				include
+					archetype_id/value matches {/openEHR-EHR-ADMIN_ENTRY\.patient\.v0/}
+			}
+			allow_archetype ADMIN_ENTRY[at0004] occurrences matches {0..*} matches {    -- Profesional
+				include
+					archetype_id/value matches {/openEHR-EHR-ADMIN_ENTRY\.rol\.v0/}
+			}
+			allow_archetype SECTION[at0005] occurrences matches {0..*} matches {    -- DepartamentoEmergencia
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.departamentoemergencia\.v0/}
+			}
+			allow_archetype SECTION[at0006] occurrences matches {0..*} matches {    -- Hospitalizacion
+				include
+					archetype_id/value matches {/.*/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"DocumentoGeneral">
+					description = <"DocumentoGeneral">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Paciente">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Profesional">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"DepartamentoEmergencia">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Hospitalizacion">
+					description = <"">
+				>
+			>
+		>
+	>
