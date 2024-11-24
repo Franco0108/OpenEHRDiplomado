@@ -1,0 +1,104 @@
+archetype (adl_version=1.4; uid=bde232a4-4f4e-4791-ad33-e863ddb6b771)
+	openEHR-EHR-COMPOSITION.hospitalizacion_.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b235bca5bc5d13b8b168c3328febb36e">
+		["build_uid"] = <"6f166dc2-8570-3932-9e9a-195492f07330">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- Hospitalizacion
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {*}    -- Item tree
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype OBSERVATION[at0002] occurrences matches {0..*} matches {    -- Signos vitales
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.signos_vitales\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0003] occurrences matches {0..*} matches {    -- Tratamiento
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
+			}
+			allow_archetype OBSERVATION[at0004] occurrences matches {0..*} matches {    -- Monitoreo
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.monitoreo\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0005] occurrences matches {0..*} matches {    -- Educacion
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.educacion\.v0/}
+			}
+			allow_archetype OBSERVATION[at0006] occurrences matches {0..*} matches {    -- Evaluacion diaria
+				include
+					archetype_id/value matches {/openEHR-EHR-OBSERVATION\.evaluacion_diaria\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Hospitalizacion">
+					description = <"Hospitalizacion ">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Signos vitales">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tratamiento">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Monitoreo">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Educacion">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Evaluacion diaria">
+					description = <"">
+				>
+			>
+		>
+	>
