@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"65072e7e78cfb6e004ff79a47538ba33">
+		["MD5-CAM-1.0.1"] = <"febc521f1a18a23eae152f91afedc57a">
 		["build_uid"] = <"8a9b3135-6bcd-36d4-8743-c414dad8b924">
 	>
 
@@ -44,15 +44,15 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype SECTION[at0002] occurrences matches {0..*} matches {    -- Triage
+			allow_archetype SECTION[at0002] matches {    -- Triage
 				include
 					archetype_id/value matches {/openEHR-EHR-SECTION\.triage\.v0/}
 			}
-			allow_archetype SECTION[at0003] occurrences matches {0..*} matches {    -- Tratamiento Inmediato
+			allow_archetype SECTION[at0003] occurrences matches {1..*} matches {    -- Tratamiento Inmediato
 				include
 					archetype_id/value matches {/openEHR-EHR-SECTION\.tratamiento_inmediato\.v0/}
 			}
-			allow_archetype EVALUATION[at0005] occurrences matches {0..*} matches {    -- CriteriosIngresoHospitalario
+			allow_archetype EVALUATION[at0005] matches {    -- CriteriosIngresoHospitalario
 				include
 					archetype_id/value matches {/openEHR-EHR-EVALUATION\.criterios_de_ingreso_hospitalario_respiratorio\.v0/}
 			}
