@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4e33e5ff376e8ebf5af3283775be42e8">
+		["MD5-CAM-1.0.1"] = <"ff38d47036b594070b5bd1671c502dbf">
 		["build_uid"] = <"b0940d6c-10a3-3d58-8554-ed6364623506">
 	>
 
@@ -44,11 +44,11 @@ definition
 			}
 		}
 		content cardinality matches {1..*; unordered} matches {
-			allow_archetype ADMIN_ENTRY[at0002] occurrences matches {0..*} matches {    -- Paciente
+			allow_archetype ADMIN_ENTRY[at0002] matches {    -- Paciente
 				include
 					archetype_id/value matches {/openEHR-EHR-ADMIN_ENTRY\.patient\.v0/}
 			}
-			allow_archetype ADMIN_ENTRY[at0004] occurrences matches {0..*} matches {    -- Profesional
+			allow_archetype ADMIN_ENTRY[at0004] matches {    -- Profesional
 				include
 					archetype_id/value matches {/openEHR-EHR-ADMIN_ENTRY\.rol\.v0/}
 			}
