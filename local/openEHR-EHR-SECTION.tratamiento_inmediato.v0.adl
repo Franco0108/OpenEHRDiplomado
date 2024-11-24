@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"06bdd6b63d8eeb7d67dd38b14d524724">
+		["MD5-CAM-1.0.1"] = <"11d2986a036c706f2b44075c9948d38e">
 		["build_uid"] = <"3db8eb59-a2d3-3e7c-a2cf-1215d89c5499">
 	>
 
@@ -64,6 +64,14 @@ definition
 					}
 				}
 			}
+			SECTION[at0008] occurrences matches {0..1} matches {    -- TratamientoFarmacologico
+				items cardinality matches {1..*; unordered} matches {
+					allow_archetype ACTION[at0009] occurrences matches {0..*} matches {    -- ActionTratamiento
+						include
+							archetype_id/value matches {/openEHR-EHR-ACTION\.tratamientofarmacologico\.v0/}
+					}
+				}
+			}
 		}
 	}
 
@@ -101,6 +109,14 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Reevaluacion">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"TratamientoFarmacologico">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"ActionTratamiento">
 					description = <"">
 				>
 			>
