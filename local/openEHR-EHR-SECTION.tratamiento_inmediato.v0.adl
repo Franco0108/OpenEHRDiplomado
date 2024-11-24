@@ -23,17 +23,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"11d2986a036c706f2b44075c9948d38e">
+		["MD5-CAM-1.0.1"] = <"b68e83a78f2e0c6a71a99f3e2072ad33">
 		["build_uid"] = <"3db8eb59-a2d3-3e7c-a2cf-1215d89c5499">
 	>
 
 definition
 	SECTION[at0000] matches {    -- Tratamiento Inmediato
 		items cardinality matches {1..*; unordered} matches {
-			allow_archetype INSTRUCTION[at0001] occurrences matches {1..*} matches {    -- Tratamiento Farmacologico
-				include
-					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
-			}
 			allow_archetype INSTRUCTION[at0002] occurrences matches {1..*} matches {    -- Pruebas Diagnosticas
 				include
 					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.procedimiento_diagnostico\.v0/}
@@ -64,11 +60,15 @@ definition
 					}
 				}
 			}
-			SECTION[at0008] occurrences matches {0..1} matches {    -- TratamientoFarmacologico
+			SECTION[at0008] occurrences matches {1..*} matches {    -- TratamientoFarmacologico
 				items cardinality matches {1..*; unordered} matches {
 					allow_archetype ACTION[at0009] occurrences matches {0..*} matches {    -- ActionTratamiento
 						include
 							archetype_id/value matches {/openEHR-EHR-ACTION\.tratamientofarmacologico\.v0/}
+					}
+					allow_archetype INSTRUCTION[at0010] occurrences matches {0..*} matches {    -- InstructionTratamiento
+						include
+							archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
 					}
 				}
 			}
@@ -82,10 +82,6 @@ ontology
 				["at0000"] = <
 					text = <"Tratamiento Inmediato">
 					description = <"Tratamiento Inmediato">
-				>
-				["at0001"] = <
-					text = <"Tratamiento Farmacologico">
-					description = <"">
 				>
 				["at0002"] = <
 					text = <"Pruebas Diagnosticas">
@@ -117,6 +113,10 @@ ontology
 				>
 				["at0009"] = <
 					text = <"ActionTratamiento">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"InstructionTratamiento">
 					description = <"">
 				>
 			>
