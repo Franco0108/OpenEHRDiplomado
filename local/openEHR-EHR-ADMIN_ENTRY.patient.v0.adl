@@ -1,0 +1,62 @@
+archetype (adl_version=1.4; uid=eca2c713-8871-4833-b72c-c103f098798d)
+	openEHR-EHR-ADMIN_ENTRY.patient.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f2ecfca438e1fa6eda9c4ac1be1b1be7">
+		["build_uid"] = <"8a52a67c-92d4-35f4-9ca7-3921d919b4be">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Patient
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] matches {    -- Patient
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.patient\.v0/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient">
+					description = <"Patient">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Patient">
+					description = <"">
+				>
+			>
+		>
+	>
