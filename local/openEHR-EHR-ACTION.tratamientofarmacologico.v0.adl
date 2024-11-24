@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"78570d65f8fc6898f00ff6fa59122859">
+		["MD5-CAM-1.0.1"] = <"defe82da906adb529a3b7df9b4b53250">
 		["build_uid"] = <"6a4858ce-9896-3a99-aac5-f51c58929ebb">
 	>
 
@@ -36,7 +36,11 @@ definition
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medicamento\.v1/}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {*}    -- Comentario
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Comentario
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 		}
