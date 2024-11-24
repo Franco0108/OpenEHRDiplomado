@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c012a3432fffaf491f1121c753b2dea0">
+		["MD5-CAM-1.0.1"] = <"1f44bb0eeee8a2fe69e7467a6399d78e">
 		["build_uid"] = <"e5ac375e-8e73-3c27-b89f-8219695f4b08">
 	>
 
@@ -34,10 +34,6 @@ definition
 				description matches {
 					ITEM_TREE[at0005] matches {    -- Item tree
 						items cardinality matches {0..*; unordered} matches {
-							allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Medicamento
-								include
-									archetype_id/value matches {/openEHR-EHR-CLUSTER\.medicamento\.v1/}
-							}
 							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Dosis
 								value matches {
 									C_DV_QUANTITY <
@@ -134,10 +130,6 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Comentario">
-					description = <"">
-				>
-				["at0014"] = <
-					text = <"Medicamento">
 					description = <"">
 				>
 			>
