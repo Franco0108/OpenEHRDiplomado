@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"413d2fbb1dde0c09157104179bfb1d54">
+		["MD5-CAM-1.0.1"] = <"e63ee8a83398d763afa16be68707156b">
 		["build_uid"] = <"ff557511-8685-35d3-9b45-985708bfffee">
 	>
 
@@ -33,6 +33,14 @@ definition
 			allow_archetype SECTION[at0001] matches {    -- Triage
 				include
 					archetype_id/value matches {/openEHR-EHR-SECTION\.triage\.v0/}
+			}
+			allow_archetype SECTION[at0002] occurrences matches {1..*} matches {    -- TratamientoInmediato
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.tratamiento_inmediato\.v0/}
+			}
+			allow_archetype EVALUATION[at0003] matches {    -- Criterios Hospitalizacion
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.criterios_de_ingreso_hospitalario_respiratorio\.v0/}
 			}
 		}
 	}
@@ -47,6 +55,14 @@ ontology
 				>
 				["at0001"] = <
 					text = <"Triage">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"TratamientoInmediato">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Criterios Hospitalizacion">
 					description = <"">
 				>
 			>
