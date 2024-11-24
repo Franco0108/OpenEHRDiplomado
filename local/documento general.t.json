@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "92e29389fd1d5ff3e6d7089e89d4d405",
+      "MD5-CAM-1.0.1" : "1cb424bc4c0ef13f1016cd95f9e70d67",
       "PARENT:MD5-CAM-1.0.1" : "ff38d47036b594070b5bd1671c502dbf"
     },
     "details" : {
@@ -147,7 +147,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "f2ecfca438e1fa6eda9c4ac1be1b1be7"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-ADMIN_ENTRY.patient.v0",
     "differential" : true,
@@ -221,7 +234,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "f94ece24c86ada625e0180bdf13b7f62"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-ADMIN_ENTRY.rol.v0",
     "differential" : true,
@@ -295,7 +321,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "e63ee8a83398d763afa16be68707156b"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.departamentoemergencia.v0",
     "differential" : true,
@@ -377,7 +416,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6c74c0265dc12f074c3f10b5cbb4134c"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.hospitalizacion.v0",
     "differential" : true,
@@ -477,7 +529,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "1b13a67bac00de9a4fa351ff339c7092"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.seccion_alta.v0",
     "differential" : true,
@@ -568,7 +633,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "a476e8df879ccb747cd0aaa309b564eb"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.patient.v0",
     "differential" : true,
@@ -619,7 +697,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ad0f32060d1c2dd0f4c94fcd43633622"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.profesional.v0",
     "differential" : true,
@@ -670,7 +761,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "379569bd96421151ced4cf309efd5ab0"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.triage.v0",
     "differential" : true,
@@ -752,7 +856,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "0359f0b55a8b050fdb094acccfd7be14"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.signos_vitales.v0",
     "differential" : true,
@@ -803,7 +920,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "84e8b51b3d506b67ef909683ad517c96"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.flujoespiratoriomaximo.v0",
     "differential" : true,
@@ -854,7 +984,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d09cebb69ecba942bcb44a2b7dcbbc6e"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.evaluacion_gravedad.v0",
     "differential" : true,
@@ -936,7 +1079,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d7d527caf7fef816c5c4bc54bb56d16c"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.trabajorespiratorio.v0",
     "differential" : true,
@@ -987,7 +1143,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "fda2046146b6ce052c975f531682bb3a"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.usomusculos.v0",
     "differential" : true,
@@ -1038,7 +1207,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "3237efc5092cb65143642f081f07ca41"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.estado_mental.v0",
     "differential" : true,
@@ -1138,7 +1320,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "24c40e8d3a92913d0bf635afc775ed05"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.aparencia.v0",
     "differential" : true,
@@ -1189,7 +1384,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "bfa825c9b56f74d1e63d82a067a768aa"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.actitud.v0",
     "differential" : true,
@@ -1240,7 +1448,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "7f4907c1d17e4180c7119f0958e03bc5"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.orientacion.v0",
     "differential" : true,
@@ -1291,7 +1512,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "30f671a66697663c1824bfa40117a8e2"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.actividad_psicomotora.v0",
     "differential" : true,
@@ -1342,7 +1576,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "b7d4fce7b53faab3a8019b5c9033531f"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.periodo_de_atencion.v0",
     "differential" : true,
@@ -1393,7 +1640,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "06bdd6b63d8eeb7d67dd38b14d524724"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.tratamiento_inmediato.v0",
     "differential" : true,
@@ -1464,9 +1724,22 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "847dfd4d88a6b0bf58f6d78e10c9c14b"
+        "PARENT:MD5-CAM-1.0.1" : "c012a3432fffaf491f1121c753b2dea0"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.tratamiento_farmacologico.v0",
     "differential" : true,
@@ -1478,7 +1751,50 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "INSTRUCTION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "activities",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ACTIVITY",
+          "occurrences" : "1..1",
+          "nodeId" : "at0006.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "description",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ITEM_TREE",
+              "nodeId" : "at0005",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_ARCHETYPE_ROOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..1",
+                  "nodeId" : "at0014.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ],
+                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-medicamento-001.v1",
+                  "referenceType" : "archetypeOverlay"
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          }, {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "action_archetype_id",
+            "children" : [ {
+              "@type" : "C_STRING",
+              "rmTypeName" : "STRING",
+              "occurrences" : "1..1",
+              "constraint" : [ "/openEHR-EHR-ACTION\\.tratamientofarmacologico\\.v0/" ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -1517,7 +1833,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "5d6ad901438852f35117a7f7391c0123"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.procedimiento_diagnostico.v0",
     "differential" : true,
@@ -1568,7 +1897,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "730d5a3439e4ed4a416ea63cade60c66"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.criterios_de_ingreso_hospitalario_respiratorio.v0",
     "differential" : true,
@@ -1619,7 +1961,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "0359f0b55a8b050fdb094acccfd7be14"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.signos_vitales.v0",
     "differential" : true,
@@ -1668,9 +2023,22 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "847dfd4d88a6b0bf58f6d78e10c9c14b"
+        "PARENT:MD5-CAM-1.0.1" : "c012a3432fffaf491f1121c753b2dea0"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.tratamiento_farmacologico.v0",
     "differential" : true,
@@ -1721,7 +2089,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "90ce9902afe1de620ba1e92e5bf2f2ec"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.monitoreo.v0",
     "differential" : true,
@@ -1772,7 +2153,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d6d09e197ae588606a97ca804773a4ed"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.educacion.v0",
     "differential" : true,
@@ -1823,7 +2217,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "5a5ecad5e9c9b3fd3ef11184178823da"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.evaluacion_diaria.v0",
     "differential" : true,
@@ -1872,9 +2279,22 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "847dfd4d88a6b0bf58f6d78e10c9c14b"
+        "PARENT:MD5-CAM-1.0.1" : "c012a3432fffaf491f1121c753b2dea0"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.tratamiento_farmacologico.v0",
     "differential" : true,
@@ -1925,7 +2345,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "dc97bcb43e3e73960e9a98be6c211c78"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.criterios_alta.v0",
     "differential" : true,
@@ -1976,7 +2409,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6d64b97fc02ba23b91eb984f93f255bc"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.planificacion_seguimiento.v0",
     "differential" : true,
@@ -2027,7 +2473,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "1f469e11e4591008ea33dbff2d0f82ed"
       },
-      "details" : { }
+      "details" : {
+        "es-cl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-cl"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.documentacion_a_entregar.v0",
     "differential" : true,
@@ -2054,6 +2513,57 @@
     },
     "adlVersion" : "1.4",
     "buildUid" : "735a4863-db87-3a09-b345-65e46252526a",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es-cl"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "6bac4416-a0f7-4b05-a7c8-1310e7cd9cca",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "3bbed17a2a23dead0164900599ec87a5"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.medicamento.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-medicamento-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "es-cl" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "763f52eb-cea5-319e-aa13-8ab644df4b64",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
