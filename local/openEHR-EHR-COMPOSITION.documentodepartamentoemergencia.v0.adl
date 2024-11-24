@@ -1,0 +1,89 @@
+archetype (adl_version=1.4; uid=7a033765-66e9-484d-abea-36e21c65b5a8)
+	openEHR-EHR-COMPOSITION.documentodepartamentoemergencia.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"febc521f1a18a23eae152f91afedc57a">
+		["build_uid"] = <"8a9b3135-6bcd-36d4-8743-c414dad8b924">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- DocumentoDepartamentoEmergencia
+		category matches {
+			DV_CODED_TEXT matches {
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT matches {
+				other_context matches {
+					ITEM_TREE[at0001] matches {*}    -- Item tree
+				}
+			}
+		}
+		content cardinality matches {1..*; unordered} matches {
+			allow_archetype SECTION[at0002] matches {    -- Triage
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.triage\.v0/}
+			}
+			allow_archetype SECTION[at0003] occurrences matches {1..*} matches {    -- Tratamiento Inmediato
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.tratamiento_inmediato\.v0/}
+			}
+			allow_archetype EVALUATION[at0005] matches {    -- CriteriosIngresoHospitalario
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.criterios_de_ingreso_hospitalario_respiratorio\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"DocumentoDepartamentoEmergencia">
+					description = <"DocumentoDepartamentoEmergencia">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Triage">
+					description = <"Triage de la atencion del paciente
+">
+				>
+				["at0003"] = <
+					text = <"Tratamiento Inmediato">
+					description = <"Tratamiento Realizado en el instante">
+				>
+				["at0005"] = <
+					text = <"CriteriosIngresoHospitalario">
+					description = <"Criterios de ingreso Hospitalario respiratorio">
+				>
+			>
+		>
+	>

@@ -1,0 +1,78 @@
+archetype (adl_version=1.4; uid=17143953-1966-454c-9b70-80bef70124a7)
+	openEHR-EHR-SECTION.seccion_alta.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::es-cl]>
+
+description
+	original_author = <
+		["date"] = <"2024-11-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["es-cl"] = <
+			language = <[ISO_639-1::es-cl]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1b13a67bac00de9a4fa351ff339c7092">
+		["build_uid"] = <"6b4c5d84-e725-331a-9c84-eef4a1ef360a">
+	>
+
+definition
+	SECTION[at0000] matches {    -- Seccion Alta
+		items cardinality matches {1..*; unordered} matches {
+			allow_archetype INSTRUCTION[at0001] occurrences matches {1..*} matches {    -- Tratamiento
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.tratamiento_farmacologico\.v0/}
+			}
+			allow_archetype EVALUATION[at0002] matches {    -- Criterios Alta
+				include
+					archetype_id/value matches {/openEHR-EHR-EVALUATION\.criterios_alta\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0003] occurrences matches {1..*} matches {    -- Planificacion seguimiento
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.planificacion_seguimiento\.v0/}
+			}
+			allow_archetype INSTRUCTION[at0004] occurrences matches {1..*} matches {    -- Documentacion Entregar
+				include
+					archetype_id/value matches {/openEHR-EHR-INSTRUCTION\.documentacion_a_entregar\.v0/}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["es-cl"] = <
+			items = <
+				["at0000"] = <
+					text = <"Seccion Alta">
+					description = <"Seccion Alta">
+				>
+				["at0001"] = <
+					text = <"Tratamiento">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Criterios Alta">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Planificacion seguimiento">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Documentacion Entregar">
+					description = <"">
+				>
+			>
+		>
+	>

@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a476e8df879ccb747cd0aaa309b564eb">
+		["MD5-CAM-1.0.1"] = <"8286246fe45862d2296954702e700acb">
 		["build_uid"] = <"eed24fe3-e100-3c4c-b671-25551abb7b41">
 	>
 
@@ -45,7 +45,7 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Segundo Apelliodo
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Segundo Apellido
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -95,7 +95,7 @@ ontology
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"Segundo Apelliodo">
+					text = <"Segundo Apellido">
 					description = <"">
 				>
 				["at0007"] = <
