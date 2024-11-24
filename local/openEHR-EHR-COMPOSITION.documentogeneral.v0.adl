@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2ce101026deb4b499c2cf256e14cdc83">
+		["MD5-CAM-1.0.1"] = <"4e33e5ff376e8ebf5af3283775be42e8">
 		["build_uid"] = <"b0940d6c-10a3-3d58-8554-ed6364623506">
 	>
 
@@ -52,13 +52,17 @@ definition
 				include
 					archetype_id/value matches {/openEHR-EHR-ADMIN_ENTRY\.rol\.v0/}
 			}
-			allow_archetype SECTION[at0005] occurrences matches {0..*} matches {    -- DepartamentoEmergencia
+			allow_archetype SECTION[at0005] matches {    -- DepartamentoEmergencia
 				include
 					archetype_id/value matches {/openEHR-EHR-SECTION\.departamentoemergencia\.v0/}
 			}
-			allow_archetype SECTION[at0006] occurrences matches {0..*} matches {    -- Hospitalizacion
+			allow_archetype SECTION[at0006] matches {    -- Hospitalizacion
 				include
-					archetype_id/value matches {/.*/}
+					archetype_id/value matches {/openEHR-EHR-SECTION\.hospitalizacion\.v0/}
+			}
+			allow_archetype SECTION[at0007] matches {    -- Alta
+				include
+					archetype_id/value matches {/openEHR-EHR-SECTION\.seccion_alta\.v0/}
 			}
 		}
 	}
@@ -89,6 +93,10 @@ ontology
 				>
 				["at0006"] = <
 					text = <"Hospitalizacion">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Alta">
 					description = <"">
 				>
 			>
